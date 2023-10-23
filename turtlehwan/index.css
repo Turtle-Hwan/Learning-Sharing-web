@@ -1,0 +1,56 @@
+div#header {
+  display: flex;
+  width: 100%;
+  padding: 25px 68px;
+  align-items: center;
+  gap: 100px;
+  background: #EDFEC9;
+  justify-content: space-between;
+}
+
+div#home-button {
+  color: #000;
+  width: 181px;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-wrap: nowrap
+}
+
+div#header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+div.menu-button {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#home-button, .menu-button {
+  cursor: pointer;
+}
+
+.menu-button::after {
+  display: block;
+  content: '';
+  width: 150%;
+  position: relative;
+  left: -25%;
+  top: 5px;
+  border-bottom: solid 5px rgba(39, 7, 236, 0.51);
+  border-radius: 15px;
+  transition: transform 250ms ease-in-out;
+  transform: scaleX(0);
+}
+.menu-button:hover::after {
+  transform: scaleX(1);
+}
