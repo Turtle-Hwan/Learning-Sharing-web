@@ -1,3 +1,4 @@
+/* header */
 div#header {
   display: flex;
   width: 100%;
@@ -35,7 +36,8 @@ div.menu-button {
   line-height: normal;
 }
 
-#home-button, .menu-button {
+#home-button,
+.menu-button {
   cursor: pointer;
 }
 
@@ -51,6 +53,39 @@ div.menu-button {
   transition: transform 250ms ease-in-out;
   transform: scaleX(0);
 }
+
 .menu-button:hover::after {
   transform: scaleX(1);
+}
+
+/* introduce 부분 */
+#intro {
+  display: flex;
+  padding: 100px;
+  gap: 100px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* #intro-content .content-title, */
+#intro-content .type-content {
+  width: 370px;
+  height: 180px;
+  color: #000;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+#intro-content .type-content::after {
+  content: '|';
+  animation: blink 1s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
 }
