@@ -70,7 +70,7 @@ div.menu-button {
 /* #intro-content .content-title, */
 #intro-content .type-content {
   width: 370px;
-  height: 180px;
+  height: 86px;
   color: #000;
   font-size: 32px;
   font-style: normal;
@@ -88,4 +88,58 @@ div.menu-button {
   to {
     opacity: 0;
   }
+}
+
+/* left-right contents --- 줄어들면 왼쪽 고정하기!*/  
+#left-right-contents {
+  display: flex;
+  padding-left: 100px;
+  padding-right: 100px;
+  gap: 100px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* life-tree */
+#life-tree .time {
+  background-color: rgba(195, 120, 254, 0.36);
+  width: 100px;
+  word-break: break-all;
+  border-radius: 15px;
+  padding: 5px 13px 5px 13px;
+}
+
+#life-tree .curcle {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background-color: #7E3D04;
+}
+
+#life-tree .line {
+  width: 5px;
+  height: 100px;
+  border-radius: 15px;
+  background-color: rgba(100, 100, 100, 0.683);
+}
+
+#life-tree .timeline-content {
+  width: 400px;
+  background-color: rgba(247, 198, 48, 0.36);
+  border-radius: 15px;
+}
+
+#life-tree {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#life-tree .timeline {
+  display: flex;
+  gap: 10px;
+}
+
+#life-tree .curcle-line {
+  
 }
