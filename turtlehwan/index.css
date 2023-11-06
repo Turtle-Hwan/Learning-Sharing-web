@@ -3,6 +3,8 @@ div#header {
   display: flex;
   width: 100%;
   padding: 25px 68px;
+  padding-left: 10%;
+  padding-right: 10%;
   align-items: center;
   gap: 100px;
   background: #EDFEC9;
@@ -27,7 +29,9 @@ div#header-menu {
   gap: 100px;
 }
 
-div.menu-button {
+a.menu-button {
+  font-size: 1rem;
+  text-decoration: none;
   color: #000;
   font-family: Inter;
   font-size: 20px;
@@ -59,15 +63,36 @@ div.menu-button {
 }
 
 /* introduce 부분 */
-#intro {
-  display: flex;
-  padding: 100px;
-  gap: 100px;
-  align-items: center;
-  justify-content: space-around;
+
+#intro::before {
+  background-image: url(./coding.jpg);
+  background-size: cover;
+  content: "";
+  opacity: 0.5;
+  position: absolute;
+  top: 105px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 450px;
+  z-index: -1;
 }
 
-/* #intro-content .content-title, */
+#intro {
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 100px;
+  gap: 100px;
+  align-items: center;
+  justify-content: space-between;
+  height: 450px;
+}
+
+/* #intro-content .content-title,  --- 줄어들면 왼쪽 고정하기! */
 #intro-content .type-content {
   width: 370px;
   height: 86px;
@@ -90,14 +115,27 @@ div.menu-button {
   }
 }
 
-/* left-right contents --- 줄어들면 왼쪽 고정하기!*/  
+/* left-right contents*/  
 #left-right-contents {
   display: flex;
-  padding-left: 100px;
-  padding-right: 100px;
+  margin-left: 15%;
+  margin-right: 15%;
   gap: 100px;
   justify-content: space-between;
   align-items: flex-start;
+}
+/* left 설명글들 */
+#left-contents {
+  min-width: 300px;
+}
+
+#left-contents > * {
+  min-height: 200px;
+}
+
+#left-contents .content-title {
+  font-size: 24px;
+  font-weight: 600;
 }
 
 /* life-tree */
@@ -107,26 +145,34 @@ div.menu-button {
   word-break: break-all;
   border-radius: 15px;
   padding: 5px 13px 5px 13px;
+  place-self: flex-start;
 }
 
 #life-tree .curcle {
   width: 30px;
   height: 30px;
+  min-height: 30px;
   border-radius: 999px;
   background-color: #7E3D04;
 }
 
 #life-tree .line {
   width: 5px;
-  height: 100px;
+  min-height: 20px;
+  height: 100%;
   border-radius: 15px;
   background-color: rgba(100, 100, 100, 0.683);
+  margin-top: 10px;
 }
 
 #life-tree .timeline-content {
   width: 400px;
   background-color: rgba(247, 198, 48, 0.36);
   border-radius: 15px;
+  padding: 5px 13px 5px 13px;
+  place-self: flex-start;
+  min-height: 60px;
+  word-break: break-all;
 }
 
 #life-tree {
@@ -141,5 +187,7 @@ div.menu-button {
 }
 
 #life-tree .curcle-line {
-  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
