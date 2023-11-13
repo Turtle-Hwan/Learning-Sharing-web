@@ -17,11 +17,12 @@
   width: 180%;
   left: -40%;
   /* border: 4px solid green; */
+  gap: 40px;
   padding: 0px;
   margin: 0px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: nowrap;
 }
@@ -38,7 +39,7 @@
   border-radius: 10px;
   background-color: rgb(165, 232, 200);
   display: inline-block;
-  margin: 10px 10px;
+  margin: 0px;
 }
 
 .carousel-button>button {

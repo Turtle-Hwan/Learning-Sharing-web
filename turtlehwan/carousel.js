@@ -14,7 +14,10 @@ function translateContainer(direction) {
   const selectedBtn = (direction === 1) ? 'prev' : 'next';
   container.ontransitionend = () => reorganizeEl(selectedBtn);
   container.style.transitionDuration = '500ms';
-  container.style.transform = `translateX(${direction * (100 / 5)}%)`;
+  // container.style.transform = `translateX(${direction * (100 / container.childElementCount)}%)`;
+  container.style.transform = `translateX(${direction * ((container.firstElementChild.offsetWidth + 40) / container.offsetWidth * 100)}%)`;
+  console.log(container.offsetWidth);
+  console.log(container.firstElementChild.offsetWidth);
 }
 
 function reorganizeEl(selectedBtn) {
