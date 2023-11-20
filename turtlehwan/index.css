@@ -1,4 +1,8 @@
 /* header */
+a {
+  color: rgba(0,0,0,0.4);
+}
+
 div#header {
   display: flex;
   width: 100%;
@@ -9,6 +13,7 @@ div#header {
   gap: 100px;
   background: #EDFEC9;
   justify-content: space-between;
+  scroll-behavior: smooth;
 }
 
 div#home-button {
@@ -88,7 +93,7 @@ a:hover {
   padding-bottom: 100px;
   margin-left: 15%;
   margin-right: 15%;
-  margin-bottom: 300px;
+  margin-bottom: 150px;
   gap: 100px;
   align-items: center;
   justify-content: space-between;
@@ -119,6 +124,20 @@ a:hover {
 }
 
 /* left-right contents*/  
+#left-right-contents::before {
+  background-image: url(./splash.jpg);
+  background-size: cover;
+  content: "";
+  opacity: 0.20;
+  position: absolute;
+  top: 555px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 2550px;
+  z-index: -1;
+}
 #left-right-contents {
   display: flex;
   margin-left: 15%;
@@ -127,6 +146,22 @@ a:hover {
   justify-content: space-between;
   align-items: flex-start;
 }
+
+@media (max-width: 1120px) {
+  #left-right-contents {
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
+    gap: 100px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  #left-right-contents::before {
+    height: 3350px;
+  }
+}
+
 /* left 설명글들 */
 #left-contents {
   min-width: 300px;
@@ -139,6 +174,10 @@ a:hover {
 #left-contents .content-title {
   font-size: 24px;
   font-weight: 600;
+}
+
+#left-contents > div {
+  margin-bottom: 50px;
 }
 
 /* life-tree */
@@ -182,7 +221,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 300px;
+  margin-bottom: 150px;
 }
 
 #life-tree .timeline {
